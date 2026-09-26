@@ -1,0 +1,12 @@
+- id: "1"
+  title: Define the triage decision contract
+  description: >-
+    Implement the validated JSON contract in CAP-1 of SPEC.md, including the allowed category, priority, and route values and a one-sentence rationale. Reject decisions outside the contract with a clear error.
+  spec_checkpoint: false
+  done_checkpoint: false
+- id: "2"
+  title: Load seed data into SQLite
+  description: >-
+    Implement the one-command seed loader in CAP-2 of SPEC.md, creating `tickets` and `customers` tables with columns matching their CSVs. Keep `mcp/triage_server.py` compatible and make repeated loads produce an equivalent database.
+  spec_checkpoint: false
+  done_checkpoint: false
