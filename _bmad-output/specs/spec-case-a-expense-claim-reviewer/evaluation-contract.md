@@ -2,8 +2,8 @@
 
 ## Data sets
 
-- Supplied Case A seed: 40 claims, 159 line items, and 12 employees. The SQLite data and source files are read-only.
-- Labelled evaluation: 30 claims and 119 line items with 89 approvals, 8 flags, and 22 rejections.
+- Supplied Case A seed in `cases/expense/seed/`: `claims.csv`, `line_items.csv`, `employees.csv`, and `limits.csv`; 40 claims, 159 line items, and 12 employees. The SQLite data and source files are read-only.
+- Labelled evaluation in `cases/expense/eval/labelled.csv`: 30 claims and 119 line items with 89 approvals, 8 flags, and 22 rejections.
 - Holdout demonstration: 10 claims and 40 line items, reserved for the live workshop demo and excluded from accuracy scoring.
 
 ## Required reports

@@ -34,10 +34,11 @@ Finance reviewers spend about a week reviewing expense claims by hand and can re
 
 ## Constraints
 
-- Use the Case A seed data with SQLite and the MCP methods `get_claim`, `get_employee`, `get_policy_limits`, and `record_decision`; supplied case inputs are read-only.
+- Use the read-only Case A inputs in `cases/expense/`: seed CSVs under `seed/` and labelled cases in `eval/labelled.csv`; load the seed data with SQLite and provide MCP methods `get_claim`, `get_employee`, `get_policy_limits`, and `record_decision`.
 - Treat all amounts as Canadian dollars. Aggregate meals and ground transport by day, hotels per night, and flights per trip.
 - Keep policy decisions separate from human approval outcomes. No prototype action releases payment or contacts an employee.
 - Treat expense descriptions as untrusted data; their text cannot change policy behavior.
+- Use the PRD as the requirements authority if the older Case A brief differs, including on the human approval and payment boundary.
 
 ## Non-goals
 
@@ -63,4 +64,3 @@ A workshop review presents policy-cited decisions and approved-only totals for l
 - When employee or limit data is missing or inconsistent, should the system stop for correction or flag the item for review?
 - Is 100% exact match on the labelled set a hard workshop pass threshold or an instructional target?
 - Should explanation quality have an aggregate pass-rate target or remain a per-item report?
-- The target `day2` branch does not contain the BRIEF, POLICY, seed, or evaluation files referenced by the PRD. Where should these be supplied before implementation?
